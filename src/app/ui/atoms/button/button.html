@@ -1,0 +1,23 @@
+<!--
+Usage patterns:
+1) Text-only: <app-atom-button label="Save"></app-atom-button>
+2) Icon-only: <app-atom-button ariaLabel="Save"><svg icon>...</svg></app-atom-button>
+3) Icon + Text: <app-atom-button label="Save"><svg icon>...</svg></app-atom-button>
+Note: put attribute "icon" on the projected element so styling selects it via ng-content selector.
+-->
+
+<button
+  [attr.aria-label]="getAriaLabel() || null"
+  [attr.type]="type"
+  [disabled]="disabled"
+  (click)="onClick($event)"
+  [ngClass]="getBaseClasses()"
+>
+  <!-- projected icon (select by attribute [icon]) -->
+  <ng-content select="[icon]"></ng-content>
+
+  <!-- label (shows if label input provided) -->
+  <span *ngIf="label" class="truncate leading-none">
+    {{ label }}
+  </span>
+</button>
