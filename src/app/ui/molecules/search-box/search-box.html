@@ -1,1 +1,36 @@
-<p>search-box works!</p>
+<div class="relative w-full">
+    <!-- Input + Button -->
+    <div class="flex items-center border rounded-lg overflow-hidden">
+      <input
+        type="text"
+        [(ngModel)]="query"
+        (input)="onInput()"
+        [placeholder]="placeholder"
+        [ngClass]="['flex-1 px-3 py-2 outline-none', customClasses.input || '']"
+      />
+  
+      <button
+        type="button"
+        (click)="onButtonClick()"
+        [ngClass]="['px-3 py-2 bg-gray-100 hover:bg-gray-200 flex items-center justify-center', customClasses.button || '']"
+      >
+        <!-- Slot icon -->
+        <ng-content select="[icon]"></ng-content>
+      </button>
+    </div>
+  
+    <!-- Suggestions Dropdown -->
+    <ul
+      *ngIf="showList"
+      [ngClass]="['absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg max-h-48 overflow-y-auto z-10', customClasses.list || '']"
+    >
+      <li
+        *ngFor="let item of suggestions"
+        (click)="selectItem(item)"
+        [ngClass]="['px-3 py-2 hover:bg-gray-100 cursor-pointer', customClasses.item || '']"
+      >
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+  

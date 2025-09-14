@@ -1,6 +1,6 @@
 <!-- npm install tailwindcss @tailwindcss/postcss postcss -->
 
-<!-- ng g c ui/atoms/button  -->
+<!-- ng g c ui/atoms/icon  -->
 <!-- ng g c ui/molecules/search-box  -->
 <!-- ng g c ui/organisms/xx  -->
 <!-- ng g c ui/templates/yy  -->
@@ -15,6 +15,10 @@
 1. design
 
 - atomic design
+<!-- 
+| ![style guide](public/image.png) | ![Ảnh 2](link2.png) | ![Ảnh 3](link3.png) |
+|---------------------|---------------------|---------------------| -->
 
-| ![Ảnh 1](link1.png) | ![Ảnh 2](link2.png) | ![Ảnh 3](link3.png) |
-|---------------------|---------------------|---------------------|
+![style guide](public/image.png)
+[demo](http://localhost:4200/styleguide)
+

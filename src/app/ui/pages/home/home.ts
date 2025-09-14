@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { ThemeService } from '../../../core/theme/dark-mode.service';
-import { Button } from '@app/ui/atoms/button/button';
 
 @Component({
   selector: 'app-home',
-  imports: [Button],
+  imports: [],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -34,11 +33,6 @@ export class Home  {
   public toggleTheme(): void {
     this._themeService.toggleDarkMode();
     this.changeStatus();
-
-
   }
 
-  public onSave(): void {
-
-  }
 }

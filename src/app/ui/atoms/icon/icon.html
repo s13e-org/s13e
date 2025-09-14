@@ -1,0 +1,22 @@
+<ng-container [ngSwitch]="renderVariant">
+    <!-- Inline raw SVG string -->
+    <svg *ngSwitchCase="'svg'" viewBox="0 0 24 24" class="block" [attr.stroke-width]="strokeWidth" fill="currentColor"
+        stroke="currentColor" [ngClass]="colorClass">
+        <g [innerHTML]="safeSvg"></g>
+    </svg>
+
+
+    <!-- Sprite symbol usage -->
+    <svg *ngSwitchCase="'sprite'" class="block" fill="currentColor" stroke="currentColor" [ngClass]="colorClass">
+        <use [attr.href]="spriteHref"></use>
+    </svg>
+
+
+    <!-- External image -->
+    <img *ngSwitchCase="'img'" [src]="src" class="block object-contain" [attr.decoding]="decoding"
+        [attr.loading]="loading" [attr.alt]="ariaHidden() ? '' : (ariaLabel || '')">
+
+
+    <!-- Content projection fallback -->
+    <ng-content *ngSwitchDefault></ng-content>
+</ng-container>

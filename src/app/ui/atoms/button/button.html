@@ -13,10 +13,9 @@ Note: put attribute "icon" on the projected element so styling selects it via ng
   (click)="onClick($event)"
   [ngClass]="getBaseClasses()"
 >
-  <!-- projected icon (select by attribute [icon]) -->
-  <ng-content select="[icon]"></ng-content>
+  <!-- <svg icon ...> -->
+  <ng-content select="[icon]"></ng-content> 
 
-  <!-- label (shows if label input provided) -->
   <span *ngIf="label" class="truncate leading-none">
     {{ label }}
   </span>
