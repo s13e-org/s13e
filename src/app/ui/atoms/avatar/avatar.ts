@@ -13,4 +13,5 @@ export class Avatar {
   @Input() alt: string = 'avatar';   
   @Input() size: number = 40;        
   @Input() rounded: boolean = true;
+  @Input() class = '';
 }

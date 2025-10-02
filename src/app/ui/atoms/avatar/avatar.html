@@ -1,6 +1,9 @@
 <img 
   [src]="src" 
   [alt]="alt"
-  [ngClass]="rounded ? 'rounded-full' : 'rounded-md'"
-  class="object-cover"
+  [ngClass]="[
+    rounded ? 'rounded-full' : 'rounded-md',
+    'object-cover',
+    class
+  ]"
 />
