@@ -19,6 +19,6 @@
 | ![style guide](public/image.png) | ![Ảnh 2](link2.png) | ![Ảnh 3](link3.png) |
 |---------------------|---------------------|---------------------| -->
 
-![style guide](public/image.png)
+![style guide](public/style-guide.png)
 [demo](http://localhost:4200/styleguide)
 

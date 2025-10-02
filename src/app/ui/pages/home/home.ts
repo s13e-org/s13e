@@ -12,6 +12,11 @@ export class Home  {
   themeName: string = '';
   private _themeService = inject(ThemeService);
   public theme$ = this._themeService.theme$;
+  
+  openUrl(url: string) {
+    // window.open(url, '_blank'); 
+    window.location.href = url; 
+  }
 
   constructor() {
     this.isChecked = false;
