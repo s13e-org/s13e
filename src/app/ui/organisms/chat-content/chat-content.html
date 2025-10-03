@@ -1,1 +1,22 @@
-<p>chat-content works!</p>
+<div class="flex flex-col h-screen"> 
+  <header class="flex items-center gap-2 p-3 border-b bg-gray-50 shrink-0">
+    <app-avatar [src]="currentChat.avatar" class="mb-6 w-12"></app-avatar>
+    <div>
+      <h3 class="font-semibold">{{ currentChat.name }}</h3>
+      <p class="text-xs text-gray-500">{{ currentChat.status }}</p>
+    </div>
+  </header>
+
+  <section class="flex-1 overflow-y-auto p-4 flex flex-col">
+    <app-message-bubble 
+      *ngFor="let m of messages" 
+      [text]="m.text" 
+      [fromMe]="m.fromMe" 
+      [timestamp]="m.time">
+    </app-message-bubble>
+  </section>
+
+  <footer class="shrink-0 border-t bg-white">
+    <app-input-box (sendMessage)="onSend($event)"></app-input-box>
+  </footer>
+</div>

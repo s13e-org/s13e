@@ -1,0 +1,16 @@
+<div class="flex items-center gap-3 p-2 rounded hover:bg-white cursor-pointer">
+  <app-avatar *ngIf="chat" [src]="chat.avatar"></app-avatar>
+  
+  <div class="flex-1">
+    <div class="flex justify-between">
+      <p class="font-semibold text-sm">{{ chat?.name }}</p>
+      <span class="text-xs text-gray-500">{{ chat?.time }}</span>
+    </div>
+    <p class="text-xs text-gray-600 truncate">{{ chat?.lastMessage }}</p>
+  </div>
+
+   <span *ngIf="hasUnread"
+        class="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+    {{ unreadCount }}
+  </span>
+</div>
