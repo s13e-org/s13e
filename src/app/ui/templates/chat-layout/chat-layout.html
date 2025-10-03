@@ -1,6 +1,6 @@
 <div class="h-screen grid grid-cols-[0.5fr_1.5fr_3fr]">
     
-  <app-sidebar-menu class="bg-gray-800 text-white p-4"></app-sidebar-menu>
+  <app-sidebar-menu [avatarSrc]="avatarSrc" [menuItems]="menuItems" class="bg-gray-800 text-white p-4"></app-sidebar-menu>
 
   <div class="bg-gray-100 overflow-y-auto">
     <app-chat-list class="p-4"></app-chat-list>

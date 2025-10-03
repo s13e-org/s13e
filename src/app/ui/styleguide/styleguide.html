@@ -8,7 +8,7 @@
       <app-button label="Primary" class="mt-2"></app-button>
       <app-button label="Secondary" variant="secondary" class="ml-2 mt-2"></app-button>
 
-      <app-button label="Gửi" class="ml-2 mt-2">
+      <app-button label="Gửi" class="ml-2 mt-2" (click)="onSave()">
         <app-icon icon class="w-5 h-5 " ariaLabel="Close" [decorative]="false">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send"
             viewBox="0 0 16 16">
@@ -18,7 +18,7 @@
         </app-icon>
       </app-button>
 
-      <app-button ariaLabel="Xóa" class="ml-2 mt-2">
+      <app-button ariaLabel="Xóa" class="ml-2 mt-2" (click)="onSave()">
         <svg icon xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
           stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
