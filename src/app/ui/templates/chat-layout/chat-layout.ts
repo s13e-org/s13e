@@ -6,6 +6,7 @@ import { MenuItem, SidebarMenu } from '@app/ui/organisms/sidebar-menu/sidebar-me
 @Component({
   selector: 'app-chat-layout',
   imports: [ChatContent, ChatList, SidebarMenu],
+  standalone: true,
   templateUrl: './chat-layout.html',
   styleUrl: './chat-layout.css'
 })
