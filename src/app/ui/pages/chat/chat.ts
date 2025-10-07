@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CurrentChat, Message } from '@app/ui/organisms/chat-content/chat-content';
 import { MenuItem } from '@app/ui/organisms/sidebar-menu/sidebar-menu';
 import { ChatLayout } from '@app/ui/templates/chat-layout/chat-layout';
 
@@ -109,5 +110,17 @@ export class Chat {
       lastMessage: 'Hi',
       unread: 2
     },
+  ];
+
+
+  currentChat: CurrentChat = {
+    name: 'John Doe',
+    avatar: '/user.png',
+    status: 'online'
+  };
+  messages: Message[] = [
+    { text: 'Hey, how are you?', fromMe: false, time: '09:01' },
+    { text: 'I’m good, thanks! What about you?', fromMe: true, time: '09:02' },
+    { text: 'Doing great, just finished a project.', fromMe: false, time: '09:05' }
   ];
 }

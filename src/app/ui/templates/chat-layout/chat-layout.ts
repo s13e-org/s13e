@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Chat } from '@app/ui/molecules/chat-item/chat-item';
-import { ChatContent } from '@app/ui/organisms/chat-content/chat-content';
+import { ChatContent, CurrentChat, Message } from '@app/ui/organisms/chat-content/chat-content';
 import { ChatList } from '@app/ui/organisms/chat-list/chat-list';
 import { MenuItem, SidebarMenu } from '@app/ui/organisms/sidebar-menu/sidebar-menu';
 
@@ -16,4 +16,6 @@ export class ChatLayout {
   @Input() menuItems: MenuItem[] = [];
   // @Input() count: number = 0;
   @Input() chat: Chat[] = [];
+  @Input() currentChat: CurrentChat | undefined;
+  @Input() messages: Message[] = [];
 }

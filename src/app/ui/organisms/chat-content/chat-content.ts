@@ -1,33 +1,32 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Avatar } from '@app/ui/atoms/avatar/avatar';
 import { InputBox } from '@app/ui/molecules/input-box/input-box';
 import { MessageBubble } from '@app/ui/molecules/message-bubble/message-bubble';
 
-interface Message {
+export interface Message {
   text: string;
   fromMe: boolean;
   time: string;
 }
 
+export interface CurrentChat {
+  name: string,
+  avatar: string,
+  status: string
+}
+
 @Component({
   selector: 'app-chat-content',
-  imports: [Avatar, InputBox, MessageBubble],
+  imports: [Avatar, InputBox, MessageBubble, CommonModule],
   standalone: true,
   templateUrl: './chat-content.html',
   styleUrl: './chat-content.css'
 })
 export class ChatContent {
-  currentChat = {
-    name: 'John Doe',
-    avatar: '/user.png',
-    status: 'online'
-  };
+  @Input() currentChat: CurrentChat | undefined;
 
-  messages: Message[] = [
-    { text: 'Hey, how are you?', fromMe: false, time: '09:01' },
-    { text: 'I’m good, thanks! What about you?', fromMe: true, time: '09:02' },
-    { text: 'Doing great, just finished a project.', fromMe: false, time: '09:05' }
-  ];
+  @Input() messages: Message[] = [];
 
   onSend(msg: string) {
     this.messages.push({
