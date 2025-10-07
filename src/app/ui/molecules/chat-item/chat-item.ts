@@ -19,7 +19,7 @@ export interface Chat {
 })
 export class ChatItem {
    @Input() chat: Chat | undefined;
-   @Input() count: number = 0;
+  //  @Input() count: number = 0;
  
    get unreadCount(): number {
     return this.chat?.unread ?? 0;

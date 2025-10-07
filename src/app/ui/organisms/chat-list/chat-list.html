@@ -1,1 +1,4 @@
-<p>chat-list works!</p>
+<div *ngFor="let item of chat">
+    <app-chat-item [chat]="item"> 
+    </app-chat-item>
+</div>

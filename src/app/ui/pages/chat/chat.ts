@@ -90,4 +90,24 @@ export class Chat {
     alert("ĐĂng xuất");
   }
 
+
+  // count: number = 0;
+  chat = [
+    {
+      id: '1',
+      name: 'A',
+      avatar: './user.png',
+      time: '22/07/2024',
+      lastMessage: 'Hi',
+      unread: 1
+    },
+    {
+      id: '2',
+      name: 'H',
+      avatar: './user.png',
+      time: '22/07/2024',
+      lastMessage: 'Hi',
+      unread: 2
+    },
+  ];
 }

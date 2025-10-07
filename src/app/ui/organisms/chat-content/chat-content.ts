@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Avatar } from '@app/ui/atoms/avatar/avatar';
-import { ChatItem } from '@app/ui/molecules/chat-item/chat-item';
 import { InputBox } from '@app/ui/molecules/input-box/input-box';
 import { MessageBubble } from '@app/ui/molecules/message-bubble/message-bubble';
 
