@@ -1,6 +1,6 @@
 <div class="flex flex-col h-screen"> 
   <header class="flex items-center gap-2 p-3 border-b bg-gray-50 shrink-0">
-    <app-avatar *ngIf="currentChat" [src]="currentChat.avatar" class="mb-6 w-12"></app-avatar>
+    <app-avatar *ngIf="currentChat" [src]="currentChat.avatar" class="w-12"></app-avatar>
     <div>
       <h3 class="font-semibold">{{ currentChat?.name }}</h3>
       <p class="text-xs text-gray-500">{{ currentChat?.status }}</p>
