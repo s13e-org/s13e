@@ -16,5 +16,6 @@ export class InputBox {
       this.sendMessage.emit(this.message);  
       this.message = '';                     
     }
+    // console.log("---- input box")
   }
 }

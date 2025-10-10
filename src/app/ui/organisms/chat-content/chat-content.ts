@@ -28,20 +28,22 @@ export class ChatContent {
 
   @Input() messages: Message[] = [];
 
+  @Output() sendMessage = new EventEmitter<string>();
+  message: string = '';
+
   onSend(msg: string) {
     this.messages.push({
       text: msg,
       fromMe: true,
-      time: new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
+      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     });
 
     setTimeout(() => {
       this.messages.push({
         text: 'Got it 👍',
         fromMe: false,
-        time: new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       });
     }, 1000);
   }
-
 }
