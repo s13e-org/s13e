@@ -20,5 +20,6 @@
 |---------------------|---------------------|---------------------| -->
 
 ![style guide](public/style-guide.png)
-[demo](http://localhost:4200/styleguide)
+<!-- [demo](http://localhost:4200/styleguide) -->
 
+![chat page](public/demo/chat-page.png)
